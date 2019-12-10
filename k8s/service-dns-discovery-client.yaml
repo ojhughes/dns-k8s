@@ -6,6 +6,8 @@ metadata:
     app: dns-k8s-java-svc
   name: dns-k8s-java-svc
   namespace: dns-demo
+  annotations:
+    kapp.k14s.io/change-rule: "upsert after upserting apps.me.ohughes.k8s-dns-java/namespace"
 spec:
   ports:
   - name: http

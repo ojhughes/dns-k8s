@@ -5,6 +5,9 @@ metadata:
   labels:
     app: discoverable-app-headless
   name: discoverable-app-headless
+  namespace: dns-demo
+  annotations:
+    kapp.k14s.io/change-rule: "upsert after upserting apps.me.ohughes.k8s-dns-java/namespace"
 spec:
   replicas: 2
   selector:

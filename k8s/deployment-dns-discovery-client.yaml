@@ -4,7 +4,9 @@ metadata:
   labels:
     app: dns-k8s-java
   name: dns-k8s-java
-  namespace: dns-example
+  namespace: dns-demo
+  annotations:
+    kapp.k14s.io/change-rule: "upsert after upserting apps.me.ohughes.k8s-dns-java/namespace"
 spec:
   replicas: 1
   selector:

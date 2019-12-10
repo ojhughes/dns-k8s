@@ -1,13 +1,9 @@
-apiVersion: skaffold/v1beta15
+apiVersion: skaffold/v1
 kind: Config
 metadata:
-  name: kubernetes-for-the-busy-java-developer
+  name: dns-k8s-java-demo
 build:
   artifacts:
   - image: ojhughes/dns-k8s-java
     context: .
     jib: {}
-deploy:
-  kubectl:
-    manifests:
-    - k8s/*

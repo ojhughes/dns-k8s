@@ -4,6 +4,9 @@ metadata:
   labels:
     app: discoverable-app
   name: discoverable-app
+  namespace: dns-demo
+  annotations:
+    kapp.k14s.io/change-rule: "upsert after upserting apps.me.ohughes.k8s-dns-java/namespace"
 spec:
   ports:
   - name: http

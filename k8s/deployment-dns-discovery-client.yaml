@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dns-k8s-java
+  name: dns-k8s-java
+  namespace: dns-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dns-k8s-java
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: dns-k8s-java
+    spec:
+      containers:
+      - image: ojhughes/dns-k8s-java
+        name: dns-k8s-java
+        resources: {}
+status: {}
